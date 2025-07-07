@@ -35,9 +35,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($post)
     {
-        return ['post' => $post];
+        return ['post' => Post::findOrFail($post)];
         //
     }
 
@@ -66,5 +66,5 @@ class PostController extends Controller
 
         return ['message' => 'the message was deleted'];
         //
-    }
+    } 
 }
