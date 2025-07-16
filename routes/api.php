@@ -1,5 +1,7 @@
 <?php
 
+
+
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;

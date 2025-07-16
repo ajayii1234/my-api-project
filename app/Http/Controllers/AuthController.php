@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -25,7 +24,7 @@ class AuthController extends Controller
             // 'token' => $token
         ];
     }
-
+                        
     public function login(Request $request){
         $request->validate([
             'email' => 'required|email|exists:users',
@@ -39,7 +38,7 @@ class AuthController extends Controller
                 'message' => 'The provided credentials are incorrect.'
             ];
         }
-
+        
         $token = $user->createToken($user->name);
         return [
             'user' => $user,
